@@ -1,10 +1,7 @@
 function getArrayParams(...arr) {
-let max = -Infinity;
-let min = Infinity;
-let sum = 0;
- max = Math.max(...arr);
- min = Math.min(...arr);
- sum = arr.reduce(function (currentSum, currentNumber){
+ let max = Math.max(...arr);
+ let min = Math.min(...arr);
+ let sum = arr.reduce(function (currentSum, currentNumber){
   return currentSum + currentNumber;
  }, 0);
 let avg = Number((sum/arr.length).toFixed(2));
@@ -20,13 +17,11 @@ return sum;
 }
 
 function differenceMaxMinWorker(...arr) {
-let max = -Infinity;
-let min = Infinity;
 if(arr.length === 0) {
   return 0;
 }
-max = Math.max(...arr);
-min = Math.min(...arr);
+let max = Math.max(...arr);
+let min = Math.min(...arr);
 return max - min;
 }
 
